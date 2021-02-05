@@ -1,0 +1,40 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-02-05T16:31:43Z",
+  "id": "appjam-mod-1",
+  "duration": 0,
+  "title": "App Jam - AppSheet Fundamentals",
+  "authors": "Nacho Garcia",
+  "summary": "In this codelab, you will get a primer on the AppSheet platform and explore the different features the platform offers. Keep in mind that the intention of this lab is to give you a high level overview of the solution and help you initiate into the citizen developer's world. For detailed training resources, please visit AppSheet Academy",
+  "source": "1WZJIa1mr4bwVDczb7ghpW6h7zZ1AE-TrxpVP__F2cLQ",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "devfest18",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "io2018",
+    "io2019",
+    "jsconfeu",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "tag-web",
+    "typtwd17",
+    "web"
+  ],
+  "feedback": "https://github.com/aliceinapiland/appjam",
+  "ga": "UA-52746336-1",
+  "url": "appjam-mod-1"
+}
