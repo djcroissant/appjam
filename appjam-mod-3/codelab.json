@@ -3,13 +3,13 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-02-05T17:14:53Z",
-  "id": "appjam-mod-1",
+  "updated": "2021-02-05T17:16:35Z",
+  "id": "appjam-mod-3",
   "duration": 0,
-  "title": "App Jam - AppSheet Fundamentals",
+  "title": "App Jam - Advance AppSheet Features",
   "authors": "Nacho Garcia",
-  "summary": "In this codelab, you will get a primer on the AppSheet platform and explore the different features the platform offers. Keep in mind that the intention of this lab is to give you a high level overview of the solution and help you initiate into the citizen developer's world. For detailed AppSheet training resources, please visit AppSheet Academy.",
-  "source": "1WZJIa1mr4bwVDczb7ghpW6h7zZ1AE-TrxpVP__F2cLQ",
+  "summary": "In this codelab, you will get familiar with some advanced AppSheet platform features and explore more of the power and flexibility of the platform. Keep in mind that the intention of this lab is to give you a quick kickstart to these platform features. For detailed AppSheet training resources, please visit AppSheet Academy.",
+  "source": "1wQLgGVOYmf4EqUQlbLdtJhgdTVP10cmGOxH6vZKzjVA",
   "theme": "web",
   "status": [
     "published"
@@ -36,5 +36,5 @@
   ],
   "feedback": "https://github.com/aliceinapiland/appjam",
   "ga": "UA-52746336-1",
-  "url": "appjam-mod-1"
+  "url": "appjam-mod-3"
 }
