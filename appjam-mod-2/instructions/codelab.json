@@ -1,0 +1,40 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-02-05T15:49:37Z",
+  "id": "appjam-mod-2",
+  "duration": 60,
+  "title": "App Jam - Zero to App in 90 mins",
+  "authors": "Hayden Amaro",
+  "summary": "This is a 2-hour hands-on workshop that will guide you step by step through building an app in the AppSheet platform.",
+  "source": "1O1Qkl2YHGC7zR_N0Sre2BZUL2tfhnKogRavrZESXD3o",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "devfest18",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "io2018",
+    "io2019",
+    "jsconfeu",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "tag-web",
+    "typtwd17",
+    "web"
+  ],
+  "feedback": "https://github.com/aliceinapiland/appjam",
+  "ga": "UA-52746336-1",
+  "url": "appjam-mod-2"
+}

@@ -1,0 +1,289 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>App Jam - Zero to App in 90 mins</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-52746336-1"
+                  id="appjam-mod-2"
+                  title="App Jam - Zero to App in 90 mins"
+                  environment="web"
+                  feedback-link="https://github.com/aliceinapiland/appjam">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>Welcome to the AppSheet App Jam! This is a 2-hour hands-on workshop that will guide you step by step through building an app in the AppSheet platform. </p>
+<h2 is-upgraded><strong>What is AppSheet?</strong></h2>
+<p>AppSheet is a leading no-code platorm for rapid Application Development that delivers tools to create, customize, and deploy mobile apps at a fraction of the cost and time of traditional development methods.</p>
+<p>There is a large, growing deficit of developers in the world. As a result, IT organizations are experiencing a huge backlog of software requests, slow development cycles, and security challenges due to shadow IT projects. AppSheet helps reduce this backlog by offering intuitive development, completely governed by central IT.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/21ae212073142411.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/25fcd5d69483d558.png"></p>
+<h2 is-upgraded><strong>What you&#39;ll build</strong></h2>
+<p>During the course, you will gain experience with many fundamental skills used in the AppSheet platform. At the end of the course, you will have built an intermediate-level app and gained the AppSheet knowledge needed to create a wide range of useful apps to enhance your business.</p>
+<h2 class="checklist" is-upgraded><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>How to create and add a web app manifest</li>
+<li>How to provide a simple offline experience</li>
+<li>How to provide a full offline experience</li>
+<li>How to make your app installable</li>
+</ul>
+<h2 is-upgraded><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A recent version of Chrome (74 or later)</li>
+<li>Users must first create a free AppSheet account <a href="https://www.appsheet.com/" target="_blank">here</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Connect Data Source &amp; Generate App" duration="15">
+        <p>This lab will walk you through the basics of connecting a data source to your appsheet environment, and using this data to generate an application.</p>
+<h2 is-upgraded>Prerequisites</h2>
+<p>Users must first create a free AppSheet account <a href="https://www.appsheet.com/" target="_blank">here</a></p>
+<h2 is-upgraded>Steps</h2>
+<p>Open the following <a href="https://docs.google.com/spreadsheets/d/1zCMLmo83Wt7oBVkWmLkzdQ4N9aOb2e5D2zjAXM3ebms/edit?usp=sharing" target="_blank">Google Sheet</a> and copy to your Google environment - Select File &gt; Make a copy. We will use this Google sheet as the data source on which we will construct our first application. </p>
+<p>Navigate to the <a href="https://www.appsheet.com/Template/Apps" target="_blank">My Apps</a> section of the AppSheet website and select the &#34;Make a new app&#34; icon</p>
+<p class="image-container"><img style="width: 549.70px" src="img/b5269879f2e47e2d.png"></p>
+<p>We are given three options to start the app building process.</p>
+<ol type="1" start="1">
+<li>&#34;Start with a sample app&#34; allows you to copy a pre built application to your environment. Pre built sample applications are available in a wide range of categories.</li>
+<li>&#34;Start with an idea&#34; allows you to define the basics of your application using natural language processing</li>
+<li> &#34;Start With Your Own Data&#34; allows users to build applications on top of data sources connected to their AppSheet accounts</li>
+</ol>
+<p>Select &#34;Start with your own data&#34; </p>
+<p class="image-container"><img style="width: 225.93px" src="img/6ac7ba2c5b531046.png"></p>
+<p>Give the app a name and select a category.</p>
+<p class="image-container"><img style="width: 573.70px" src="img/fac69d960dba4b48.png"></p>
+<p>Locate and select the Google Sheet you copied to your drive earlier in the lab</p>
+<p class="image-container"><img style="width: 356.70px" src="img/7e857377da8e8f3e.png"></p>
+<p>AppSheet will now stand up a basic application based on the connected data source. We are now taken to the AppSheet editor where we can begin modifying our application. </p>
+<p>The AppSheet editor has three primary sections</p>
+<ol type="1" start="1">
+<li>The <strong>quick nav menu</strong>, which takes you to the various areas of the editor.</li>
+<li>The main<strong> editor body</strong> - this is where you can modify your app&#39;s definition. </li>
+<li>The <strong>emulator</strong> - which shows you a live interactive preview of your application as you build</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/3b5b79ca718672eb.png"></p>
+<p>The main first table in our Google Sheet titled &#34;Requests&#34; has been ingested automatically, but we will need to add the &#34;Users&#34; table manually. Navigate to the data section of the editor and click to add the table titled &#34;Users&#34;</p>
+<p class="image-container"><img style="width: 527.70px" src="img/d90c3a96991a9c0a.png"></p>
+<p>Open the &#34;Requests&#34; table, and select &#34;View Columns&#34;. Here you see a list of the columns included in our underlying data source, and can make changes to how that data is ingested.  </p>
+<p>Selecting a data type for each column helps AppSheet contextualize the data and provide relevant actions inside of your application. By modifying the settings for each column we can put guard rails on data entry, fill out values automatically, and change input methods inside of our app. </p>
+<p>Change the data type for the column &#34;Status&#34; to <a href="https://help.appsheet.com/en/articles/961539-dropdown-from-simple-list-of-values" target="_blank">Enum</a>. This data type allows us to restrict users to a few select options when inputting data in this column.</p>
+<p class="image-container"><img style="width: 590.70px" src="img/95045f52bdaaffb2.png"></p>
+<p>Click the pencil icon to edit the properties of the status column. Add three values: &#34;Review Required&#34;, &#34;Approved&#34;, &#34;Rejected&#34;</p>
+<h2 is-upgraded><img style="width: 621.70px" src="img/d106d27b85f844b0.png"></h2>
+<p>These values will appear as select options when the user interacts with forms inside of the application. </p>
+<p class="image-container"><img style="width: 215.70px" src="img/9575518bfa82cb41.png"></p>
+<p>In a typical app building scenario, you would repeat this process of data type categorization for each column in the underlying data source.</p>
+<p>The final concept we will explore in this lab is the <a href="https://help.appsheet.com/en/articles/961426-references-between-tables" target="_blank">Ref or Reference</a>. </p>
+<p>A reference is a link between a column of one table and the key of another table - indicating that the two connected pieces of data are related to one another.  </p>
+<p>If we look at our &#34;Requests&#34; and &#34;Users&#34; table - we notice that the information contained in the User column of the Requests table maps to the User column found in the Users table.</p>
+<table>
+<tr><td colspan="3" rowspan="1"><p><strong>Requests Table</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>ID</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>User</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>...</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>86569920-4649-43c6-aebe-2a9420ed0287</p>
+</td><td colspan="1" rowspan="1"><p>generic@fake.com</p>
+</td><td colspan="1" rowspan="1"><p>...</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>5162d20f-1116-456d-993c-b99516c1e0b4</p>
+</td><td colspan="1" rowspan="1"><p>hayden@appsheet.com</p>
+</td><td colspan="1" rowspan="1"><p>...</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>02711cd3-9639-4c60-b7e4-b34a336f52dc</p>
+</td><td colspan="1" rowspan="1"><p>generic@user.com</p>
+</td><td colspan="1" rowspan="1"><p>...</p>
+</td></tr>
+</table>
+<table>
+<tr><td colspan="3" rowspan="1"><p><strong>Users Table</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>User</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Name</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>...</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>generic@fake.com</p>
+</td><td colspan="1" rowspan="1"><p>John Doe</p>
+</td><td colspan="1" rowspan="1"><p>...</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>hayden@appsheet.com</p>
+</td><td colspan="1" rowspan="1"><p>Hayden Amaro</p>
+</td><td colspan="1" rowspan="1"><p>...</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>generic@user.com</p>
+</td><td colspan="1" rowspan="1"><p>Jane Doe</p>
+</td><td colspan="1" rowspan="1"><p>...</p>
+</td></tr>
+</table>
+<p>We can use References to relate these two tables and draw line of sight between related data points across tables. </p>
+<p>Open the data section and navigate to the &#34;Requests&#34; table. Click the &#34;View Columns&#34; button. </p>
+<p>You will notice that the platform has already identified this association between the Requests and Users table and made the ‘User&#39; column in the &#34;Requests&#34; table a Ref.</p>
+<p>Save your application by clicking the SAVE button in the upper right corner of the editor. </p>
+<p class="image-container"><img style="width: 624.00px" src="img/462a9c7daf9bbbb4.png"></p>
+<p>Thus concludes App Jam lab 1! </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create and Manage Views" duration="15">
+        <p>This lab will walk you through the basics of building and modifying views in the AppSheet Editor</p>
+<h2 is-upgraded>Prerequisites</h2>
+<p>Users must have completed Lab 1</p>
+<h2 is-upgraded>Steps</h2>
+<p>We&#39;ll begin this lab by navigating to the UX tab in the quick nav menu. This pulls up a section of the editor where users are able to create and manage the views which will appear in our application. </p>
+<p>Notice that the views listed in the Primary Views section correspond to the navigation buttons inside the app preview in the emulator. </p>
+<p class="image-container"><img style="width: 624.00px" src="img/27eec1b726113acb.png"></p>
+<p>Views come in various types. Click on the Requests button in the Emulator and in the Main Editor Body. If we select a new view type for the Requests view, that change is reflected instantly in the Emulator. Change the view to type Card.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/3c4cbcc1a2f02974.png"></p>
+<p>We can change how this view looks and operates by modifying it&#39;s settings. Let&#39;s begin by grouping the entries by Status and sorting the entries by Timestamp.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/ad15251e3b3535ed.png"></p>
+<p>To create a new view, click the New View icon at the top of the views section.</p>
+<p class="image-container"><img style="width: 519.70px" src="img/857971ca06888332.png"></p>
+<p>Give the new view the title New Form, select the Requests table as the data source, and select the view type &#34;Form&#34;.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/dcb43e6cf32aa767.png"></p>
+<p>We can now interact with our new view in the Emulator. Select the form from the navigation bar and fill out the form with example data, then click save.</p>
+<p class="image-container"><img style="width: 134.70px" src="img/69a8c94ad4cb7d79.png"></p>
+<p>Navigate back to the underlying data source for the application (The Google Sheet you copied) by navigating to the Data tab and selecting View Source</p>
+<p class="image-container"><img style="width: 624.00px" src="img/e42edffcd6ea61ac.png"></p>
+<p>Notice that there is now a new row containing the data you input via the form.</p>
+<p>AppSheet gives us the ability to modify the overall look and feel of our application from a centralized location. Navigate to the UX tab and select Brand.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/8fa8cc4ecdff3392.png"></p>
+<p>Change the App Logo, and Background image, and Primary color of your application. Notice how these changes are reflected in the App Emulator on the right side of the screen. </p>
+<p class="image-container"><img style="width: 624.00px" src="img/1889faad2d1d84e2.png"></p>
+<p>More UX settings can be manipulated under the Options tab. Change font from Roboto to Rubik. </p>
+<p class="image-container"><img style="width: 599.70px" src="img/b6edf1d00140d8ae.png"></p>
+<p>Format rules can be applied dynamically to data surfaced through your application - this can be used to improve the readability of your application, or to telegraph information like Status. Navigate to Format Rules and create a new rule. </p>
+<p class="image-container"><img style="width: 624.00px" src="img/6c38e173a15b172.png"></p>
+<p>Format Rules operate by monitoring a particular data point in your app&#39;s data - if that data point meets a filter condition you define, then the Format Rule will be applied in the app.</p>
+<p>We&#39;ll build a Format Rule which highlights requests that have been approved by displaying a green checkbox. Give your format rule a name - ours is titled &#34;Highlight Approved Requests&#34;. Select the Requests table in the &#34;For This Data&#34; section. </p>
+<p class="image-container"><img style="width: 624.00px" src="img/2536fce6c8d35204.png"></p>
+<p>Now we need to tell AppSheet when to apply this rule by adding a filter condition. Click inside the &#34;If this condition is true&#34; box to open the expression editor.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/e230198769e5bf2e.png"></p>
+<p>  Input the following expression;<br><br>[Status] = &#34;Approved&#34;</p>
+<p class="image-container"><img style="width: 624.00px" src="img/7290b1ea2320eee8.png"></p>
+<p>[Status] tells Appsheet to look at the value of the status column</p>
+<p>= &#34;Approved&#34; tells AppSheet to check if the value in that column is &#34;Approved&#34;</p>
+<p>If this expression resolves to TRUE, our format rule will be applied. We need to tell AppSheet which piece of data we&#39;d like to apply this format rule to. From the &#34;Format These Columns&#34; section, select Status.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/68df645eeb95e3f5.png"></p>
+<p>Finally we must designate a formatting change to be applied when the format rule executes. In this case we will select the Check icon and the Highlight Color green.</p>
+<p>Now click the &#34;SAVE&#34; button in the upper right corner of the screen - this will ensure your Format Rule is applied.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/a0f11b59b1c30912.png"></p>
+<p>Notice in the emulator that entries matching this filter condition have had the format rule applied. </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create and Manage App Behaviors" duration="15">
+        <p>This lab will walk you through the basics of creation and modification of app behaviors</p>
+<h2 is-upgraded>Prerequisites</h2>
+<p>Users must have completed Lab 2</p>
+<h2 is-upgraded>Steps</h2>
+<p>In the prior lab we created a basic form and applied some format rules to this view. In this lab we will layer on additional modifications to improve the behavior and function of this form.  </p>
+<p>To do this we will leverage AppSheet&#39;s automation capabilities to have the form autofill some values in order to streamline the data entry process.</p>
+<p>Let&#39;s begin by navigating to the Data tab and setting up some expressions to autofill values on the user&#39;s behalf;</p>
+<p class="image-container"><img style="width: 578.56px" src="img/dbddf087a11bb808.png"></p>
+<p>Scrolling to the right reveals that there are many areas where we can manipulate how data is handled inside of our apps. Among them;</p>
+<ul>
+<li>Setting an initial auto populated value for a field (INITIAL VALUE)</li>
+<li>Setting a calculated value for a field (FORMULA)</li>
+<li>Determining whether a field is displayed or not (SHOW?)</li>
+<li>Determining whether a field is editable to our users (EDITABLE?)</li>
+</ul>
+<p>Let&#39;s make a few changes to these properties and see how it affects the user experience inside of a form.</p>
+<ol type="1" start="1">
+<li>Changes to the ID column</li>
+</ol>
+<ul>
+<li>Set the initial value to UNIQUEID()</li>
+<li>Uncheck the EDITABLE? Box</li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img/17f17410c6932bda.png"></p>
+<p>These changes will cause AppSheet to generate a new Unique Identifier in the ID column whenever a new entry is created - toggling the editable field ensures that users cannot change this ID from within the app.</p>
+<ol type="1" start="2">
+<li>Changes to the Timestamp column</li>
+</ol>
+<ul>
+<li>Set the initial value for timestamp to NOW()</li>
+</ul>
+<p>This expression will cause AppSheet to automatically insert a timestamp in this field on behalf of the user. </p>
+<p class="image-container"><img style="width: 624.00px" src="img/f029068a750b6eea.png"></p>
+<ol type="1" start="3">
+<li>Changes to the User column</li>
+</ol>
+<ul>
+<li>Set the initial value to USEREMAIL ()</li>
+<li>Uncheck the EDITABLE? Box</li>
+<li>Uncheck the SHOW? Box</li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img/793faa96a50544e1.png"></p>
+<p>These changes will capture the logged in users email and automatically associate it with any records generated. We have deselected the Editable box such that the user cannot modify this automatically captured information. We have also unchecked the SHOW? Box as this information is not relevant to the user.</p>
+<p>Now navigate back to the form in the emulator, and see how the user experience is changed. The fields we modified in the data section now autofill with no need for user input. </p>
+<p class="image-container"><img style="width: 212.70px" src="img/b678e99e62c2853c.png"></p>
+<p>We can also apply automation to other areas of our application. We will now walk through the process of setting up a basic notification workflow! </p>
+<p><a href="https://help.appsheet.com/en/articles/961707-workflow" target="_blank">Workflows</a> monitor a data set for changes of a certain type, and when a change of that type occurs, AppSheet performs an action automatically. The workflow we will define here is intended to notify users via email when new Requests are added via the form we built earlier. </p>
+<p>Navigate to the Behaviors section and the workflows tab. Select Create New Workflow, name it New Request Notification. </p>
+<p>Set the Target Data to Requests</p>
+<p>Set the Update event to ADDS_ONLY</p>
+<p class="image-container"><img style="width: 590.70px" src="img/6072bfd7cf22c23a.png"></p>
+<p>Next we must define the action we want the workflow to perform when a new entry is added. </p>
+<p>Select Email from the action list, and in the To field input the following expression;</p>
+<p>[User]</p>
+<p>This expression will pull the email of the user who submitted the request, and route the email generated to that user.</p>
+<p class="image-container"><img style="width: 402.70px" src="img/ebbce1157d5e4ff2.png"></p>
+<p>Input the text New Request Submitted into the Email Subject field. In this case, we will leave the Email Body field empty - this will cause AppSheet to automatically generate the email body summarizing the data related to the request. </p>
+<p>Let&#39;s try it out! Navigate to the form in the emulator, and submit a new request. </p>
+<p class="image-container"><img style="width: 266.71px" src="img/2a42cd54f4ae14e3.png"></p>
+<p>Now check your email! Within a few minutes you should receive a notification from the app.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Access Control and Management" duration="15">
+        <p>This lab will walk you through the basics of controlling user access to data, and user management.</p>
+<h2 is-upgraded>Prerequisites</h2>
+<p>Users must have completed Lab 3</p>
+<h2 is-upgraded>Steps</h2>
+<p>The first topic covered in this lab will be Security Filters. When you use Security Filters, you normally set the Require user authentication option on the<a href="https://help.appsheet.com/security" target="_blank"> Security</a> &gt;<a href="https://help.appsheet.com/security/user-access-control/require-sign-in-the-essentials" target="_blank"> Require Sign-In</a> pane. This ensures that we are able to identify each authenticated app user.</p>
+<p>Once a user signs in, AppSheet knows the user&#39;s email address. You can then use the user&#39;s email address to filter the data shown to that user. In addition to filtering data, you can also<a href="https://help.appsheet.com/security/security-filters/limiting-users-to-particular-tables-views-and-actions" target="_blank"> limit users to particular tables, views, and actions</a></p>
+<p>Let&#39;s begin by Navigating to the Security section of the editor and creating our first Security Filter. Security Filters operate on a table by table basis, and restrict access to data based on the identity of the logged in user. Click on the icon for Requests to begin designing our Security Filter. </p>
+<p class="image-container"><img style="width: 543.70px" src="img/b7d292e5a36e8c26.png"></p>
+<p>A security filter checks that a certain conditional logic expression is met before showing a user any row in a table. We&#39;ll create an expression that checks if the row in question was created by the logged in user before displaying that entry. </p>
+<p>In the Security Filter field, input the following expression; </p>
+<p>USEREMAIL() = [User]</p>
+<p class="image-container"><img style="width: 624.00px" src="img/2179386ea365f877.png"></p>
+<p>USEREMAIL() returns the email address of the authenticated app user</p>
+<p>= [User] compares that value to the value in the User column</p>
+<p>If this condition is met for any row, that row will be visible to the logged in user. The effect of this Security Filter is that Users can only see rows they have created / are associated with. This data restriction will carry over to all views which are based on this table.</p>
+<p>Filter Condition: (USEREMAIL() = [Email]). This filter will only allow users to see their own submissions. Navigate to the Users tab, and add yourself as an approved user. You will receive an email notification.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
